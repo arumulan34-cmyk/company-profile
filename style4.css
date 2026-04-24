@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Qurellia';
+    src: url('font/Qurellia-Salesta DEMO.ttf') format('opentype');
+}
+
+body{
+    font-family: 'Qurellia', sans-serif;
+    background-color: #ab7a44;
+}
+
+.menu{
+  display: flex;
+  justify-content: flex-end; /* menu ke tengah */
+  gap: 40px; /* jarak antar menu */
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: #e0e0e0;
+  position: relative;
+}
+
+.menu a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #36200c;
+  transition: 0.3s;
+}
+
+.menu a:hover::after{
+  width: 100%;
+}
+
+.profile-keterangan{
+  width: 100%;
+  max-width: 1300px;
+  height: 600px;
+  margin: 20px auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.bg-spa {
+  background-color: #684626;
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #36200c;
+}
+
+.spa-info{
+  background-color: #684626;
+  padding: 15px;
+  border-radius: 0 0 15px 15px; /* bawah bulat */
+  text-align: center;
+  flex: 1; /* bikin semua kotak sama tinggi */
+}
+
+.text-spa{
+  max-width: 400px;
+}
+
+.judul-spa{
+   text-align: left;
+    margin-left: 840px;
+    margin-bottom: -35px;
+  color: #e5e5e5;
+}
+
+.info-spa{
+    display: flex;
+    align-items: center; /* biar sejajar tengah */
+    max-width: 1100px;   /* membatasi area supaya tidak melebar */
+    margin: auto;        /* biar tetap di tengah */
+    gap: 200px;           /* jarak antara teks dan gambar */
+}
+
+.pembuka-spa{
+    color: #e5e5e5;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.sub{
+  font-weight: bold;
+  color: #e5e5e5;
+}
+
+.sub-isi{
+  color: #e5e5e5;
+}
+
+.gambar-spa{
+    border-radius: 20px;
+    width: 400px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.menu-spa{
+    text-align: center;
+    margin-top: 30px;
+    color: #e5e5e5;
+}
+
+.spa-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card-spa{
+  width: 180px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-spa img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-spa p{
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+
+.line{
+  width: 100%;        /* mengikuti ukuran layar */
+    height: 2px;
+    background-color: #36200c;
+    margin: 20px auto;
+}
+
+.alamat{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.email p,
+.alamat p,
+.tiktok p{
+  margin: 0;
+  margin-left: 30px;
+  color: #e5e5e5;
+}
+
+.judul-email,
+.judul-alamat,
+.judul-tiktok{
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #e5e5e5;
+}
+
+.isi-tiktok{
+  text-align: center;
+}
+
+.info-bawah{
+  display: flex;
+  gap: 80px;
+  margin-top: 20px;
+  align-items: flex-start;
+  justify-content: center; /* ini bikin isi ke tengah */
+}
+
+.kiri-info{
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* jarak email tiktok alamat */
+  flex-wrap: wrap; /* supaya tidak rusak di layar kecil */
+}
+
+.isi-alamat{
+  margin: 0;
+}
+
+.kiri-info{
+  display: flex;
+  gap: 80px;
+}
+
+.instagram{
+  text-align: center;
+  color: #e5e5e5;
+}
+
+.judul-instagram{
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #e5e5e5;
+}
+
+.sosial{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
