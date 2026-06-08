@@ -5,7 +5,7 @@
 
 body{
     font-family: 'Qurellia', sans-serif;
-    background-color: #e0e0e0;
+    background-color: #F4EDDF;
 }
 
 .menu{
@@ -14,11 +14,12 @@ body{
   gap: 40px; /* jarak antar menu */
   margin-top: 20px;
   margin-right: 80px;
+  flex-wrap: wrap;
 }
 
 .menu a{
   text-decoration: none;
-  color: #3f3d3d;
+  color: #1C2E4A;
   position: relative;
 }
 
@@ -29,7 +30,7 @@ body{
   bottom: -3px;
   width: 0;
   height: 2px;
-  background-color:#3f3d3d;;
+  background-color:#1C2E4A;
   transition: 0.3s;
 }
 
@@ -44,29 +45,32 @@ body{
   margin: 20px auto;
   display: block;
   object-fit: cover;
-  object-position: center;
+  object-position: center 70%;
   border-radius: 20px;
 }
 
 .kotak{
-   display: flex;
-  justify-content: center; /* tengah horizontal */
-  align-items: center;     /* tengah vertikal */
-  position: relative;
   width: 45%;
-  height: 501px;
-  background-color:#565656;
-  margin: 50px 50px 0 auto;
+  background-color:#1C2E4A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
+.gym-section{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 50px;
+}
+
 .foto1-gym{
-  width: 50%;
-  height: 499px;
-  margin-top:-527px;
+  width: 45%;
+  height: 500px;
   object-fit: cover;
-  margin-left: 50px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -101,31 +105,30 @@ body{
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  border: 3px solid  #3f3d3d;;
+  border: 3px solid  #1C2E4A;
   border-radius: 20px;
   margin: 50px;
 }
 
 .judul-pt{
   font-size: 62px;
-  padding-left: 50px; /* biar sejajar sama box */
   text-align: center;
-  position: relative;
-  bottom: 80%;
-  color: #3f3d3d;
+  color: #1C2E4A;
+  margin-top: 20px;
 }
 
 .row-atas{
   display: flex;
-  align-items: center; /* sejajar tengah */
-  justify-content: center;
-  gap: 80px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 500px;
   margin-top: 10px;
 }
 
 .row-bawah{
   display: flex;
   justify-content: center; /* Anggun di tengah */
+  margin-top: -150px;
 }
 
 .coach{
@@ -133,7 +136,8 @@ body{
 }
 
 .coach p{
-  color: #3f3d3d;
+  color: #1C2E4A;
+  width: 300px;
 }
 
 .coach-img{
@@ -144,30 +148,117 @@ body{
   margin-top: 10px;
 }
 
+.anggun{
+  font-weight: bold;
+}
+
+.hero2{
+  display: flex;
+  justify-content: center;
+}
+
+.persegipanjang{
+  width: 1250px;   /* ukuran persegi panjang */
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.persegipanjang img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+
+.hero-text h2{
+  font-size: 60px;
+  margin-top: -60px;
+}
+
+.service-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -80px; /* bikin naik ke atas */
+  position: relative;
+  z-index: 2;
+}
+
+.service-box{
+  width: 250px;
+  height: 200px;
+  background-color: #243B5A;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.service-box img{
+  width: 160px;
+  margin-top: -35px;
+}
+
+.service-box p{
+  font-weight: bold;
+}
+
 .package-gym{
   font-size: 42px;
   padding-left: 50px; /* biar sejajar sama box */
   text-align: center;
   position: relative;
-  margin-top: 20px;
-  color: #3f3d3d;
+  margin-top: 90px;
+  color: #1C2E4A;
 }
 
-.membership-menu{
+.container-square{
   display: flex;
-  justify-content: center;
-   padding-left: 50px; /* biar sejajar sama box */
+  gap: 20px; /* jarak antar kotak */
+   justify-content: center;
 }
 
-.membership-menu p{
-  padding: 0 25px;
-  border-right: 2px solid #3f3d3d;
-  color: #3f3d3d;
+.square{
+  width: 400px ;
+  height: 450px;
+  background-color: #1C2E4A;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/* biar yang terakhir gak ada garis */
-.membership-menu p:last-child{
-  border-right: none;
+.square h3{
+  margin-bottom: 10px;
+  color:#e0e0e0;
+}
+
+.square p{
+  font-size: 14px;
+  margin-bottom: 15px;
+  color:#e0e0e0;
+}
+
+.square-img{
+  width: 100%;
+  border-radius: 12px;
+  height: 300px;
+  object-fit: cover;  
+  object-position: center 60%;
+   margin-top: auto;
 }
 
 .container-box{
@@ -180,9 +271,10 @@ body{
 }
 
 .judul-box{
-  font-size: 28px;
+  font-size: 45px;
   padding-left: 50px; /* biar sejajar sama box */
-  color: #3f3d3d;
+  color: #1C2E4A;
+  margin-top: 50px;
 }
 
 .wrapper-box{
@@ -194,8 +286,8 @@ body{
 .box{
   width: 150px;
   height: 70px;
-  border: 2px solid #3f3d3d;
-  color: #3f3d3d;
+  border: 2px solid #1C2E4A;
+  color: #1C2E4A;
   border-radius: 15px;
   display: flex;
   justify-content: center; /* tengah horizontal */
@@ -203,37 +295,22 @@ body{
   text-align: center;
 }
 
+.reveal{
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .line{
   width: 100%;        /* mengikuti ukuran layar */
     height: 2px;
-    background-color: #3f3d3d;;
+    background-color: #1C2E4A;
     margin: 20px auto;
-}
-
-.alamat{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.email p,
-.alamat p,
-.tiktok p{
-  margin: 0;
-  margin-left: 30px;
-  color: #3f3d3d;
-}
-
-.judul-email,
-.judul-alamat,
-.judul-tiktok{
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: center;
-  color: #3f3d3d;
-}
-
-.isi-tiktok{
-  text-align: center;
 }
 
 .info-bawah{
@@ -244,35 +321,141 @@ body{
   justify-content: center; /* ini bikin isi ke tengah */
 }
 
-.kiri-info{
+
+.navigation{
   display: flex;
-  flex-direction: row;
-  gap: 20px; /* jarak email tiktok alamat */
-  flex-wrap: wrap; /* supaya tidak rusak di layar kecil */
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.isi-alamat{
-  margin: 0;
+.navigation a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #3f3d3d;
 }
 
-.kiri-info{
+.information{
   display: flex;
-  gap: 80px;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.information a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #3f3d3d;
 }
 
 .instagram{
+  display: flex;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.instagram a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #3f3d3d;
+}
+
+.judul-navigation,
+.judul-work,
+.judul-instagram,
+.judul-information{
+  font-weight: bold;
+  margin-bottom: 5px;
   text-align: center;
 }
 
-.judul-instagram{
-  font-weight: bold;
-  margin-bottom: 5px;
-}
+@media (max-width: 768px){
 
+  .menu{
+    margin-right: 20px;
+    gap: 20px;
+  }
 
+  .profile-keterangan{
+    height: auto;
+  }
 
-.sosial{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  .kotak{
+    width: 45%;
+    padding: 20px 15px;
+    margin: 0;
+  }
+
+  .foto1-gym{
+    width: 45%;
+    height: 350px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .gym-section{
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .j-gym{
+    font-size: 18px;
+  }
+
+  .p-gym{
+    font-size: 12px;
+  }
+
+  .container-coach{
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .judul-pt{
+    font-size: 36px;
+  }
+
+  .row-atas{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+  }
+
+  .row-bawah{
+    margin-top: 0;
+  }
+
+  .coach-img{
+    width: 140px;
+    height: 140px;
+  }
+
+  .coach p{
+    width: 140px;
+    font-size: 14px;
+  }
+
+  .hero-text h2{
+    font-size: 32px;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .square{
+    width: 90%;
+    height: auto;
+  }
+
+  .square-img{
+    height: 250px;
+  }
+
 }

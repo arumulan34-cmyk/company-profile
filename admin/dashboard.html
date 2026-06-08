@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="style2.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="menu">
+        <button id="uploadBtn">+ Add New Promo</button>
+<input type="file" id="promoInput" accept="image/*" hidden>
+    <button id="pilatesBtn">+ Add Pilates Schadule Class</button>
+    <input type="file" id="pilatesInput" accept="image/*" hidden>
+    <button id="yogaBtn">+ Add Yoga Schadule Class</button>
+     <input type="file" id="yogaInput" accept="image/*" hidden>
+  </div>
+
+   <section class="hero" id="home">
+  <video autoplay muted loop playsinline class="profile">
+    <source src="gambar/vidio1.MOV" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="caption">
+    <p>ETERNAH FITNESS</p>
+    <p>CENTER & PILATES</p>
+    <p>WOMAN ONLY</p>
+    <a href="https://wa.me/6281298614012" class="btn" target="_blank">Contact Us</a>
+  </div>
+
+  <img src="gambar/logos.png" alt="logo" class="logo">
+</div>
+</section>
+    
+    <div class="info reveal">
+        <img src="gambar/foto a.png" alt="gambar atas" class="gambar-atas" id="about">
+        <p class="teks-atas">Eternah Fitness Center & Pilates Woman Only</p>
+        <p class="pembuka"> Focusing on women's physical and mental health, we offer a variety 
+          of activities including gym, Pilates, spa, yoga, and other classes. Our goal is to 
+          create a comfortable environment for women without pressure or judgment.</p>
+    <img src="gambar/foto b.png" alt="gambar bawah" class="gambar-bawah">
+    </div>
+
+    <h2 class="provide reveal" id="service">We Provide service</h2>
+
+    <div class="menucard reveal">
+    <div class="card">
+        <a href="gym.html">
+            <img src="gambar/gym.jpeg" alt="gym eternah">
+            <p>Gym</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="pilates.html">
+            <img src="gambar/pilates.jpeg" alt="pilates eternah">
+            <p>Pilates</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="spa.html">
+            <img src="gambar/profile spa.jpeg" alt="spa eternah">
+            <p>Spa</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Yoga.html">
+            <img src="gambar/yoga.jpeg" alt="Yoga eternah">
+            <p>Yoga</p>
+        </a>
+    </div>
+</div>
+
+<h2 class="promo reveal" id="showerroom">Showerroom</h2>
+<div class="gallery reveal">
+
+    <div class="box box1">
+      <img src="gambar/sh1.jpeg">
+    </div>
+
+    <div class="box box2">
+      <img src="gambar/sh2.jpeg">
+    </div>
+
+    <div class="box box3">
+      <img src="gambar/sh3.jpeg">
+    </div>
+
+    <div class="box box4">
+      <video src="gambar/sh4.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="box box5">
+      <video src="gambar/sh5.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="box box6">
+      <video src="gambar/sh6.mp4" autoplay muted loop></video>
+    </div>
+
+  </div>
+
+<h2 class="promo reveal">Promo Special</h2>
+<div id="promoContainer"></div>
+
+<h2 class="promo reveal">Pilates Schaadule class</h2>
+<div id="pilatesContainer"></div>
+
+<h2 class="promo reveal">Yoga Schaadule class</h2>
+<div id="yogaContainer"></div>
+
+<div class="line"></div>
+
+<div class="info-bawah reveal">
+  
+  <div class="navigation">
+    <p class="judul-navigation">Navigation</p>
+    <a href="#home">home</a>
+    <a href="#about">About Us</a>
+    <a href="#service">Service</a>
+    <a href="#showerroom">Showerroom</a>
+    <a href="#promo">Promo</a>
+  </div>
+   
+  <div class="information">
+  <p class="judul-information">Information</p>
+  <a href="mailto:eternellewellness0852@gmail.com?subject=Hello">Email</a>
+  <a href="https://www.tiktok.com/@eternah.wellness" target="_blank" rel="noopener noreferrer">TikTok</a>
+  <a href="https://maps.app.goo.gl/U3ruCeUkguZ2kH8Z8"target="_blank"rel="noopener noreferrer">Alamat</a>
+</div>
+
+<div class="instagram">
+    <p class="judul-instagram">Instagram</p>
+    <a href="https://www.instagram.com/eternelle_wellness" target="_blank"> eternelle_wellness </a>
+    <a href="https://www.instagram.com/eternah.eternelle" target="_blank"> eternah.eternelle </a>
+    <a href="https://www.instagram.com/eternelle.fitness" target="_blank"> eternelle.fitness </a>
+  </div>
+
+  <div class="work">
+    <p class="judul-work">work Hour</p>
+    <p>07 am - 10 pm</p>
+    <p>Monday - Sunday</p>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<script type="module">
+
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+// =======================
+// REVEAL ANIMATION
+// =======================
+
+
+function revealOnScroll() {
+
+  const reveals = document.querySelectorAll('.reveal')
+  
+  reveals.forEach((element) => {
+
+    const windowHeight = window.innerHeight
+    const elementTop = element.getBoundingClientRect().top
+
+    if (elementTop < windowHeight - 100) {
+      element.classList.add('active')
+    }
+
+  })
+
+}
+
+window.addEventListener('scroll', revealOnScroll)
+
+
+// =======================
+// SUPABASE
+// =======================
+
+const supabaseUrl = 'https://cafkykwogqsigoozxfol.supabase.co'
+const supabaseKey = 'sb_publishable_rQdlpO_OD1SbqM0q5ELSZw_U2cXL41q'
+
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+
+// =======================
+// PROMO UPLOAD
+// =======================
+
+const uploadBtn = document.getElementById("uploadBtn")
+const promoInput = document.getElementById("promoInput")
+
+
+uploadBtn.addEventListener("click", () => {
+  promoInput.click()
+})
+
+promoInput.addEventListener("change", async (e) => {
+
+  const file = e.target.files[0]
+
+  if (!file) return
+
+  const fileName = Date.now() + "-" + file.name
+
+  const { error } = await supabase.storage
+    .from("Promo")
+    .upload(fileName, file)
+
+  if (error) {
+    alert("Upload promo gagal")
+    console.log(error)
+    return
+  }
+
+  alert("Promo berhasil diupload!")
+
+  loadPromo()
+
+})
+
+
+// =======================
+// YOGA UPLOAD
+// =======================
+
+const yogaBtn = document.getElementById("yogaBtn")
+const yogaInput = document.getElementById("yogaInput")
+
+yogaBtn.addEventListener("click", () => {
+  yogaInput.click()
+})
+
+yogaInput.addEventListener("change", async (e) => {
+
+  const file = e.target.files[0]
+
+  if (!file) return
+
+  const fileName = Date.now() + "-" + file.name
+
+  const { error } = await supabase.storage
+    .from("Yoga Schadule")
+    .upload(fileName, file)
+
+  if (error) {
+    alert("Upload yoga gagal")
+    console.log(error)
+    return
+  }
+
+  alert("Yoga berhasil diupload!")
+
+  loadYoga()
+
+})
+
+
+// =======================
+// PILATES UPLOAD
+// =======================
+
+const pilatesBtn = document.getElementById("pilatesBtn")
+const pilatesInput = document.getElementById("pilatesInput")
+
+pilatesBtn.addEventListener("click", () => {
+  pilatesInput.click()
+})
+
+pilatesInput.addEventListener("change", async (e) => {
+
+  const file = e.target.files[0]
+
+  if (!file) return
+
+  const fileName = Date.now() + "-" + file.name
+
+  const { error } = await supabase.storage
+    .from("Pilates schadule")
+    .upload(fileName, file)
+
+  if (error) {
+    alert("Upload pilates gagal")
+    console.log(error)
+    return
+  }
+
+  alert("Pilates berhasil diupload!")
+
+  loadPilates()
+
+})
+
+
+// =======================
+// LOAD PROMO
+// =======================
+
+async function loadPromo() {
+
+  const { data, error } = await supabase.storage
+    .from("Promo")
+    .list()
+
+  if (error) {
+    console.log(error)
+    return
+  }
+
+  const promoContainer = document.getElementById("promoContainer")
+
+  promoContainer.innerHTML = ""
+
+  data.forEach((file) => {
+
+    const { data: publicUrlData } = supabase.storage
+      .from("Promo")
+      .getPublicUrl(file.name)
+
+    const wrapper = document.createElement("div")
+
+    wrapper.classList.add("reveal")
+
+    wrapper.style.display = "flex"
+    wrapper.style.flexDirection = "column"
+    wrapper.style.alignItems = "center"
+
+    const img = document.createElement("img")
+
+    img.src = publicUrlData.publicUrl
+
+    img.style.width = "300px"
+    img.style.height = "400px"
+    img.style.objectFit = "cover"
+    img.style.borderRadius = "20px"
+    img.style.margin = "10px"
+
+    const deleteBtn = document.createElement("button")
+
+    deleteBtn.innerText = "Delete"
+    deleteBtn.classList.add("delete-btn")
+
+    deleteBtn.addEventListener("click", async () => {
+
+      const { error } = await supabase.storage
+        .from("Promo")
+        .remove([file.name])
+
+      if (error) {
+        alert("Gagal hapus")
+        console.log(error)
+        return
+      }
+
+      alert("Promo berhasil dihapus!")
+
+      loadPromo()
+
+    })
+
+    wrapper.appendChild(img)
+    wrapper.appendChild(deleteBtn)
+
+    promoContainer.appendChild(wrapper)
+
+    setTimeout(() => {
+  wrapper.classList.add("active")
+}, 100)
+
+  })
+
+}
+
+
+// =======================
+// LOAD YOGA
+// =======================
+
+async function loadYoga() {
+
+  const { data, error } = await supabase.storage
+    .from("Yoga Schadule")
+    .list()
+
+  if (error) {
+    console.log(error)
+    return
+  }
+
+  const yogaContainer = document.getElementById("yogaContainer")
+
+  yogaContainer.innerHTML = ""
+
+  data.forEach((file) => {
+
+    const { data: publicUrlData } = supabase.storage
+      .from("Yoga Schadule")
+      .getPublicUrl(file.name)
+
+    const wrapper = document.createElement("div")
+
+    wrapper.style.display = "flex"
+    wrapper.style.flexDirection = "column"
+    wrapper.style.alignItems = "center"
+
+    const img = document.createElement("img")
+
+    img.src = publicUrlData.publicUrl
+
+    img.style.width = "300px"
+    img.style.height = "400px"
+    img.style.objectFit = "cover"
+    img.style.borderRadius = "20px"
+    img.style.margin = "10px"
+
+    const deleteBtn = document.createElement("button")
+
+    deleteBtn.innerText = "Delete"
+    deleteBtn.classList.add("delete-btn")
+
+    deleteBtn.addEventListener("click", async () => {
+
+      const { error } = await supabase.storage
+        .from("Yoga Schadule")
+        .remove([file.name])
+
+      if (error) {
+        alert("Gagal hapus")
+        console.log(error)
+        return
+      }
+
+      alert("Yoga berhasil dihapus!")
+
+      loadYoga()
+
+    })
+
+    wrapper.appendChild(img)
+    wrapper.appendChild(deleteBtn)
+
+    yogaContainer.appendChild(wrapper)
+
+  })
+
+}
+
+
+// =======================
+// LOAD PILATES
+// =======================
+
+async function loadPilates() {
+
+  const { data, error } = await supabase.storage
+    .from("Pilates schadule")
+    .list()
+
+  if (error) {
+    console.log(error)
+    return
+  }
+
+  const pilatesContainer = document.getElementById("pilatesContainer")
+
+  pilatesContainer.innerHTML = ""
+
+  data.forEach((file) => {
+
+    const { data: publicUrlData } = supabase.storage
+      .from("Pilates schadule")
+      .getPublicUrl(file.name)
+
+    const wrapper = document.createElement("div")
+
+    wrapper.style.display = "flex"
+    wrapper.style.flexDirection = "column"
+    wrapper.style.alignItems = "center"
+
+    const img = document.createElement("img")
+
+    img.src = publicUrlData.publicUrl
+
+    img.style.width = "300px"
+    img.style.height = "400px"
+    img.style.objectFit = "cover"
+    img.style.borderRadius = "20px"
+    img.style.margin = "10px"
+
+    const deleteBtn = document.createElement("button")
+
+    deleteBtn.innerText = "Delete"
+    deleteBtn.classList.add("delete-btn")
+
+    deleteBtn.addEventListener("click", async () => {
+
+      const { error } = await supabase.storage
+        .from("Pilates schadule")
+        .remove([file.name])
+
+      if (error) {
+        alert("Gagal hapus")
+        console.log(error)
+        return
+      }
+
+      alert("Pilates berhasil dihapus!")
+
+      loadPilates()
+
+    })
+
+    wrapper.appendChild(img)
+    wrapper.appendChild(deleteBtn)
+
+    pilatesContainer.appendChild(wrapper)
+
+  })
+
+}
+
+
+// =======================
+// JALANKAN SEMUA
+// =======================
+
+loadPromo()
+loadYoga()
+loadPilates()
+
+</script>
+
+</body>
+</html>

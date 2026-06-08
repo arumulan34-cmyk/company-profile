@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+    <link rel="stylesheet" href="style1.css">
+  <title>Login Admin</title>
+</head>
+<body>
+    
+    <div id="about" class="kotak reveal">
+      <div class="text-gym" id="gym-text">
+       <p class="j-gym">LOGIN</p>
+       <form autocomplete="off">
+    <div class="input-box">
+      <label>Username:</label>
+      <input type="text" id="username" autocomplete="off">
+    </div>
+
+    <div class="input-box">
+      <label>Password:</label>
+    <div class="password-box">
+  <input type="password" id="password" autocomplete="new-password">
+  <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+</div>
+</div>
+</form>
+
+    <button class="login-btn" onclick="login()">Login</button>
+
+      </div>
+      </div>
+      
+
+      <script>
+
+function login(){
+
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if(user === "admin" && pass === "eternelle321"){
+    window.location.href = "dashboard.html";
+    alert("Login Berhasil!");
+  }
+
+  else{
+    alert("Username atau Password Salah!");
+  }
+
+}
+
+const password = document.getElementById("password");
+const toggle = document.getElementById("togglePassword");
+
+toggle.addEventListener("click", () => {
+
+  if(password.type === "password"){
+    password.type = "text";
+
+    /* password terlihat */
+    toggle.classList.remove("fa-eye-slash");
+    toggle.classList.add("fa-eye");
+
+  } else {
+    password.type = "password";
+
+    /* password disembunyikan */
+    toggle.classList.remove("fa-eye");
+    toggle.classList.add("fa-eye-slash");
+  }
+
+});
+</script>
+
+</body>
+</html>

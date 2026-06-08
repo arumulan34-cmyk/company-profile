@@ -5,7 +5,7 @@
 
 body{
     font-family: 'Qurellia', sans-serif;
-    background-color: #ab7a44;
+    background-color: #F4EDDF;
 }
 
 .menu{
@@ -18,7 +18,7 @@ body{
 
 .menu a{
   text-decoration: none;
-  color: #e0e0e0;
+  color: #684626;
   position: relative;
 }
 
@@ -70,9 +70,8 @@ body{
 }
 
 .judul-spa{
-   text-align: left;
-    margin-left: 840px;
-    margin-bottom: -35px;
+   text-align: center;
+    margin-bottom: 15px;
   color: #e5e5e5;
 }
 
@@ -109,7 +108,7 @@ body{
 .menu-spa{
     text-align: center;
     margin-top: 30px;
-    color: #e5e5e5;
+    color: #684626;
 }
 
 .spa-container{
@@ -139,38 +138,22 @@ body{
   font-size: 16px;
 }
 
+.reveal{
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .line{
   width: 100%;        /* mengikuti ukuran layar */
     height: 2px;
-    background-color: #36200c;
+    background-color: #4e3522;
     margin: 20px auto;
-}
-
-.alamat{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.email p,
-.alamat p,
-.tiktok p{
-  margin: 0;
-  margin-left: 30px;
-  color: #e5e5e5;
-}
-
-.judul-email,
-.judul-alamat,
-.judul-tiktok{
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: center;
-  color: #e5e5e5;
-}
-
-.isi-tiktok{
-  text-align: center;
 }
 
 .info-bawah{
@@ -181,35 +164,89 @@ body{
   justify-content: center; /* ini bikin isi ke tengah */
 }
 
-.kiri-info{
+.navigation{
   display: flex;
-  flex-direction: row;
-  gap: 20px; /* jarak email tiktok alamat */
-  flex-wrap: wrap; /* supaya tidak rusak di layar kecil */
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.isi-alamat{
-  margin: 0;
+.navigation a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #4e3522;
 }
 
-.kiri-info{
+.information{
   display: flex;
-  gap: 80px;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.information a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #4e3522;
 }
 
 .instagram{
-  text-align: center;
-  color: #e5e5e5;
+  display: flex;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.judul-instagram{
+.instagram a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #4e3522;
+}
+
+.work{
+  color:#4e3522 ;
+}
+
+.judul-navigation,
+.judul-work,
+.judul-instagram,
+.judul-information{
   font-weight: bold;
   margin-bottom: 5px;
-  color: #e5e5e5;
+  text-align: center;
+  color: #4e3522;
 }
 
-.sosial{
-  display: flex;
-  flex-direction: column;
+@media (max-width: 768px){
+
+  .bg-spa{
+    width: 90%;
+    padding: 20px;
+  }
+
+  .info-spa{
   gap: 10px;
+  }
+
+  .judul-spa{
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .text-spa{
+    font-size: 20px;
+  }
+
+  .pembuka-spa{
+    font-size: 12px;
+  }
+
 }

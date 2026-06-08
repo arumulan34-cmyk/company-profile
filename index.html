@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternah Fitness Center & Pilates for Women Only</title>
+
+    <meta name="description"
+    content="Eternah Fitness Center & Pilates for Women Only menyediakan layanan gym, pilates, yoga, dan spa khusus wanita dengan fasilitas yang nyaman dan profesional.">
+
+    <meta name="keywords"
+    content="Eternah Fitness Center, gym wanita, pilates wanita, yoga wanita, spa wanita">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="style1.css">
     <title>Profile</title>
 </head>
 <body>
-   <section class="hero">
+
+  <div class="navbar">
+<div class="login"> <a href="admin/login.html">Admin</a></div>
+
+    <div class="menu">
+        <a href="#home">Home </a>
+    <a href="#about">About Us</a>
+    
+    <div class="dropdown">
+    <a href="#">Service <span class="arrow">></span> </a>
+
+    <div class="dropdown-content">
+      <a href="gym.html">Gym</a>
+      <a href="pilates.html">Pilates</a>
+      <a href="spa.html">Spa</a>
+      <a href="Yoga.html">Yoga</a>
+    </div>
+  </div>
+
+  <a href="#showerroom">Showerrom</a>
+    <a href="#promo">Promo </a>
+  </div>
+  </div>
+
+   <section class="hero" id="home">
   <video autoplay muted loop playsinline class="profile">
     <source src="images/vidio1.MOV" type="video/mp4">
   </video>
@@ -26,16 +58,18 @@
 </div>
 </section>
     
-    <div class="info">
+    <div class="info reveal" id="about">
         <img src="images/foto a.png" alt="gambar atas" class="gambar-atas">
         <p class="teks-atas">Eternah Fitness Center & Pilates Woman Only</p>
-        <p class="pembuka"> fokus pada kesehatan fisik & mental khusus perempuan.
-    menyediakan pilihan kegiatan seperti gym, pilates, spa, yoga dan kelas lainnya.
-    Tujuannya adalah menciptakan lingkungan nyaman bagi perempuan tanpa tekanan atau penilaian.</p>
+        <p class="pembuka"> Focusing on women's physical and mental health, we offer a variety 
+          of activities including gym, Pilates, spa, yoga, and other classes. Our goal is to 
+          create a comfortable environment for women without pressure or judgment.</p>
     <img src="images/foto b.png" alt="gambar bawah" class="gambar-bawah">
     </div>
 
-    <div class="menu">
+    <h2 class="provide reveal" id="service">We Provide service</h2>
+
+    <div class="menucard reveal">
     <div class="card">
         <a href="gym.html">
             <img src="images/gym.jpeg" alt="gym eternah">
@@ -52,7 +86,7 @@
 
     <div class="card">
         <a href="spa.html">
-            <img src="images/spa.jpeg" alt="spa eternah">
+            <img src="images/profile spa.jpeg" alt="spa eternah">
             <p>Spa</p>
         </a>
     </div>
@@ -65,38 +99,146 @@
     </div>
 </div>
 
+<h2 class="promo reveal" id="showerroom">Showerroom</h2>
+<div class="gallery reveal">
+
+    <div class="box box1">
+      <img src="images/sh1.jpeg">
+    </div>
+
+    <div class="box box2">
+      <img src="images/sh2.jpeg">
+    </div>
+
+    <div class="box box3">
+      <img src="images/sh3.jpeg">
+    </div>
+
+    <div class="box box4">
+      <video src="images/sh4.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="box box5">
+      <video src="images/sh5.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="box box6">
+      <video src="images/sh6.mp4" autoplay muted loop></video>
+    </div>
+
+  </div>
+
+<h2 class="promo reveal" id="promo">Promo Special</h2>
+<div id="promoContainer"></div>
+
 <div class="line"></div>
 
-<div class="info-bawah">
-  <div class="kiri-info">
-  <div class="email">
-    <p class="judul-email">Email</p>
-    <p class="isi-email">eternahgymcenter@gmail.com</p>
+<div class="info-bawah reveal">
+  
+  <div class="navigation">
+    <p class="judul-navigation">Navigation</p>
+    <a href="#home">home</a>
+    <a href="#about">About Us</a>
+    <a href="#service">Service</a>
+    <a href="#showerroom">Showerroom</a>
+    <a href="#promo">Promo</a>
   </div>
    
-  <div class="sosial">
-  <div class="tiktok">
-    <p class="judul-tiktok">TikTok</p>
-    <p class="isi-tiktok">Eternah Women Wellness</p>
-  </div>
-
-  <div class="alamat">
-    <p class="judul-alamat">Alamat</p>
-    <p class="isi-alamat">Jl. Tole Iskandar No.10 Kota Depok, Jawa Barat, Indonesia</p>
-  </div>
-
+  <div class="information">
+  <p class="judul-information">Information</p>
+  <a href="mailto:eternellewellness0852@gmail.com?subject=Hello">Email</a>
+  <a href="https://www.tiktok.com/@eternah.wellness" target="_blank" rel="noopener noreferrer">TikTok</a>
+  <a href="https://maps.app.goo.gl/U3ruCeUkguZ2kH8Z8"target="_blank"rel="noopener noreferrer">Alamat</a>
 </div>
 
 <div class="instagram">
     <p class="judul-instagram">Instagram</p>
-    <p class="isi-instagram">
-        eternelle.fitness - eternah.eternelle - eternelle.wellness
-    </p>
+    <a href="https://www.instagram.com/eternelle_wellness" target="_blank"> eternelle_wellness </a>
+    <a href="https://www.instagram.com/eternah.eternelle" target="_blank"> eternah.eternelle </a>
+    <a href="https://www.instagram.com/eternelle.fitness" target="_blank"> eternelle.fitness </a>
   </div>
+
+  <div class="work">
+    <p class="judul-work">work Hour</p>
+    <p>07 am - 10 pm</p>
+    <p>Monday - Sunday</p>
   </div>
 
 </div>
+
 </div>
+</div>
+
+<script type="module">
+
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+const supabaseUrl = 'https://cafkykwogqsigoozxfol.supabase.co'
+const supabaseKey = 'sb_publishable_rQdlpO_OD1SbqM0q5ELSZw_U2cXL41q'
+
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+
+// REVEAL ANIMATION
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+
+  reveals.forEach((element) => {
+
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      element.classList.add('active');
+    }
+
+  });
+
+}
+
+window.addEventListener('scroll', revealOnScroll)
+
+
+// LOAD PROMO
+async function loadPromo() {
+
+  const { data, error } = await supabase.storage
+    .from("Promo")
+    .list()
+
+  if (error) {
+    console.log(error)
+    return
+  }
+
+  const promoContainer = document.getElementById("promoContainer")
+
+  promoContainer.innerHTML = ""
+
+  data.forEach((file) => {
+
+    const { data: publicUrlData } = supabase.storage
+      .from("Promo")
+      .getPublicUrl(file.name)
+
+    const img = document.createElement("img")
+
+    img.src = publicUrlData.publicUrl
+
+    img.style.width = "300px"
+    img.style.borderRadius = "20px"
+    img.style.margin = "10px"
+
+    promoContainer.appendChild(img)
+
+  })
+
+}
+
+loadPromo()
+
+</script>
 
 </body>
 </html>
