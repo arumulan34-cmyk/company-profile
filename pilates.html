@@ -21,6 +21,7 @@ content="pilates khusus wanita di Eternah Fitness Center dengan personal trainer
     <a href="#class">Classes</a>
     <a href="#packages">Membership Packages </a>
     <a href="#benefit">Benefit</a>
+    <a href="#hybrid">Pilates Strength</a>
     <a href="#Schadule">Schadule Class</a>
   </div>
 
@@ -118,6 +119,7 @@ content="pilates khusus wanita di Eternah Fitness Center dengan personal trainer
       <p>Group Class</p>
       <p>Customized Group Class</p>
       <p>Semi Private Group</p>
+      <p>Pilates Strength</p>
       </div> 
 
 <h2 id="packages" class="package-gym reveal">Membership Packages</h2>
@@ -125,7 +127,7 @@ content="pilates khusus wanita di Eternah Fitness Center dengan personal trainer
       <p>3 session</p>
       <p>5 session</p>
       <p>10 session</p>
-      <p>20 session</p>
+      <p>15 session</p>
       </div>
 
       <div class="container-box reveal">
@@ -140,9 +142,37 @@ content="pilates khusus wanita di Eternah Fitness Center dengan personal trainer
       </div>
 </section>
 
-<h2 class="judul-scadule reveal" id="Schadule">Schadule Class</h2>
-<div id="pilatesContainer" class="schedule-container"></div>
+<h2 class="package-gym reveal" id="hybrid">Pilates Strength</h2>
+<section class="service-section">
 
+    <div class="service-card">
+
+        <div class="service-video">
+            <video autoplay muted loop playsinline>
+                    <source src="images/pilates strength.MOV" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+        </div>
+
+        <h2>Pilates Strength</h2>
+
+        <p>
+           Pilates Strength is a dynamic Pilates class designed to build strength, 
+           improve body control, and enhance overall stability. Through controlled 
+           movements and focused exercises, this class helps strengthen the core and 
+           supporting muscles while improving posture, balance, and movement quality
+        </p>
+
+    </div>
+    </section>
+
+<!-- ======================================================== -->
+<!-- SECTION JADWAL & KALENDER PILATES-->
+<!-- ======================================================== -->
+<h2 class="judul-scadule" id="Schadule">Schedule Class</h2>
+<div id="pilatesContainer"></div>
+
+<!-- ======================================================== -->
 
 <div class="line"></div>
 
@@ -187,29 +217,27 @@ content="pilates khusus wanita di Eternah Fitness Center dengan personal trainer
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 const supabaseUrl = 'https://cafkykwogqsigoozxfol.supabase.co'
-
 const supabaseKey = 'sb_publishable_rQdlpO_OD1SbqM0q5ELSZw_U2cXL41q'
-
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-
-async function loadPilates() {
-
+// Load Image Pilates dari Storage
+async function loadpilates() {
   const { data, error } = await supabase.storage
     .from("Pilates schadule")
     .list()
 
   if (error) {
-    console.log(error)
+     console.log("ERROR:", error)
     return
   }
 
   const pilatesContainer = document.getElementById("pilatesContainer")
 
+  if (!pilatesContainer) return
+
   pilatesContainer.innerHTML = ""
 
   data.forEach((file) => {
-
     const { data: publicUrlData } = supabase.storage
       .from("Pilates schadule")
       .getPublicUrl(file.name)
@@ -217,7 +245,6 @@ async function loadPilates() {
     const img = document.createElement("img")
 
     img.src = publicUrlData.publicUrl
-
     img.style.width = "300px"
     img.style.height = "400px"
     img.style.objectFit = "cover"
@@ -225,37 +252,30 @@ async function loadPilates() {
     img.style.margin = "10px"
 
     pilatesContainer.appendChild(img)
-
   })
-
 }
 
-loadPilates()
+// Jalankan saat halaman pertama di-load
+loadpilates();
 
 </script>
 
 <script>
 
+// Animasi reveal saat scroll
 const reveals = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
-
   reveals.forEach((element) => {
-
     const windowHeight = window.innerHeight;
     const elementTop = element.getBoundingClientRect().top;
 
     if (elementTop < windowHeight - 100) {
       element.classList.add('active');
     }
-
   });
-
 }
 
 window.addEventListener('scroll', revealOnScroll);
 
 </script>
-
-</body>
-</html>

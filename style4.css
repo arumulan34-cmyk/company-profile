@@ -250,3 +250,43 @@ body{
   }
 
 }
+
+@media (max-width: 600px) {
+
+  .info-bawah {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+    justify-items: center;
+    align-items: start;
+  }
+
+  .navigation,
+  .information,
+  .instagram,
+  .work {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a,
+  .information a,
+  .instagram a {
+    display: block;
+    text-align: center;
+  }
+
+  .judul-navigation,
+  .judul-information,
+  .judul-instagram,
+  .judul-work {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}

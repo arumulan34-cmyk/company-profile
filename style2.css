@@ -3,6 +3,13 @@
     src: url('font/Qurellia-Salesta DEMO.ttf') format('opentype');
 }
 
+html,
+body{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body{
     font-family: 'Qurellia', sans-serif;
     background-color: #F4EDDF;
@@ -50,27 +57,43 @@ body{
 }
 
 .kotak{
-  width: 45%;
-  background-color:#1C2E4A;
+   width: 50%;
+  max-width: 650px;
+
+  background-color: #1C2E4A;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 30px;
+
+  box-sizing: border-box;
+
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
 .gym-section{
+  width: 100%;
+  max-width: 1300px;
+  margin: 50px auto 0;
+
   display: flex;
   justify-content: center;
   align-items: stretch;
-  margin-top: 50px;
+
+  box-sizing: border-box;
 }
 
 .foto1-gym{
-  width: 45%;
+   width: 50%;
+  max-width: 650px;
   height: 500px;
+
   object-fit: cover;
+  box-sizing: border-box;
+
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -100,69 +123,14 @@ body{
   color: #e0e0e0;
 }
 
-.container-coach{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  border: 3px solid  #1C2E4A;
-  border-radius: 20px;
-  margin: 50px;
-}
-
-.judul-pt{
-  font-size: 62px;
-  text-align: center;
-  color: #1C2E4A;
-  margin-top: 20px;
-}
-
-.row-atas{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 500px;
-  margin-top: 10px;
-}
-
-.row-bawah{
-  display: flex;
-  justify-content: center; /* Anggun di tengah */
-  margin-top: -150px;
-}
-
-.coach{
-  text-align: center;
-}
-
-.coach p{
-  color: #1C2E4A;
-  width: 300px;
-}
-
-.coach-img{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-top: 10px;
-}
-
-.anggun{
-  font-weight: bold;
-}
-
-.hero2{
-  display: flex;
-  justify-content: center;
-}
-
 .persegipanjang{
-  width: 1250px;   /* ukuran persegi panjang */
+  width: min(1250px, calc(100% - 40px));
   height: 300px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .persegipanjang img{
@@ -376,6 +344,584 @@ body{
   text-align: center;
 }
 
+/* =========================
+   SERVICE SECTION
+========================= */
+
+.service-section {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.service-card {
+    width: 620px;
+    min-height: 630px;
+
+    background: #1C2E4A;
+
+    border-radius:25px;
+
+    padding: 18px 35px 35px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.30);
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.service-video {
+    width: 300px;
+    height: 350px;
+
+    margin: 0 auto 22px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.service-video video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.service-card h2 {
+    margin: 0 0 28px;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    font-style: italic;
+
+    color: #e0e0e0;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.service-card p {
+    margin: 0 auto 28px;
+
+    max-width: 550px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .service-card {
+        width: 100%;
+        padding: 18px 25px 30px;
+    }
+
+    .service-video {
+        width: 70%;
+        height: 330px;
+    }
+
+    .service-card h2 {
+        font-size: 28px;
+    }
+
+    .service-card p {
+        font-size: 16px;
+    }
+}
+
+/* =================================
+   COACH PROFILE
+================================= */
+
+.coach-profile {
+    padding: 100px 20px;
+    background:  transparent;
+}
+
+.coach-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.coach-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.coach-heading span {
+    display: block;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    letter-spacing: 4px;
+    color: #1C2E4A;
+
+    margin-bottom: 10px;
+}
+
+.coach-heading h2 {
+    margin-top:-50px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size:30px;
+    font-weight: 100px;
+
+    color: #1C2E4A;
+}
+
+.coach-fanny{
+  transform: translateY(-30px);
+}
+
+.coach-isma{
+  margin-top: 100px;
+}
+
+.coach-lia{
+  padding-bottom: 100px;
+  
+}
+
+.coach-heading p {
+    margin-top: 8px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #1C2E4A;
+}
+
+.coach-text p {
+  color: #1C2E4A !important;
+}
+
+.coach-text h3 {
+  color: #1C2E4A !important;
+}
+
+.expertise{
+  color: #1C2E4A
+}
+
+
+/* =================================
+   COLLAGE
+================================= */
+
+.coach-collage {
+    position: relative;
+
+    width: 850px;
+    height: 650px;
+
+    margin: auto;
+}
+
+
+/* =================================
+   ALL PHOTO
+================================= */
+
+.photo {
+    position: absolute;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =================================
+   MAIN PHOTO
+================================= */
+
+.photo-main {
+    width: 360px;
+    height: 500px;
+
+    left: 70px;
+    top: 20px;
+
+    z-index: 2;
+}
+
+
+/* =================================
+   SMALL PHOTO
+================================= */
+
+.photo-small {
+    width: 260px;
+    height: 220px;
+
+    right: 60px;
+    top: 0;
+
+    z-index: 3;
+
+    border: 10px solid #f7f4ee;
+}
+
+
+/* =================================
+   BOTTOM PHOTO
+================================= */
+
+.photo-bottom {
+    width: 300px;
+    height: 230px;
+
+    left: 0;
+    bottom: 30px;
+
+    z-index: 3;
+
+    border: 10px solid #f7f4ee;
+}
+
+
+/* =================================
+   TEXT
+================================= */
+
+.coach-text {
+    position: absolute;
+
+    width: 300px;
+
+    right: 30px;
+    top: 250px;
+
+    z-index: 4;
+}
+
+.coach-text h3 {
+    margin: 0 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    color: #252525;
+}
+
+.coach-text p {
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #6f7655;
+
+    margin-bottom: 25px;
+}
+
+.coach-specialty {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #8b916c;
+}
+
+
+/* =================================
+   QUOTE
+================================= */
+
+.coach-quote {
+    position: absolute;
+
+    left: 390px;
+    bottom: 35px;
+
+    width: 240px;
+
+    padding: 20px 25px;
+
+    background: #c6d49e;
+
+    z-index: 5;
+}
+
+.coach-quote span {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    line-height: 20px;
+
+    color: #6f7655;
+}
+
+.coach-quote p {
+    margin: 5px 0 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #35382d;
+}
+
+
+/* =================================
+   BOTTOM INFO
+================================= */
+
+.coach-info {
+    width: 700px;
+
+    margin: 100px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #d6d0c5;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+}
+
+.coach-info div {
+    text-align: center;
+}
+
+.coach-info span {
+    display: block;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    color: #7e855f;
+}
+
+.coach-info p {
+    margin: 7px 0 0;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+.trainer-section{
+    position: relative;
+}
+
+.judul-trainer{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* =================================
+   FIX PEMISAH COACH
+================================= */
+
+/* Jarak antara Coach Isma dan Coach Lia */
+.coach-isma {
+    margin-bottom: 100px;
+}
+
+/* Coach Lia turun sedikit */
+.coach-lia {
+    margin-top: 80px;
+}
+
+
+/* =================================
+   SUPAYA GARIS TIDAK MEMOTONG EXPERTISE
+================================= */
+
+.coach-lia .coach-collage {
+    height: 750px;
+}
+
+.coach-lia .coach-info {
+    margin-top: 50px;
+}
+
+
+/* =================================
+   UKURAN DESKTOP TETAP
+================================= */
+
+@media (min-width: 901px) {
+
+    .coach-collage {
+        width: 850px;
+        height: 650px;
+    }
+
+    .coach-lia .coach-collage {
+        width: 850px;
+        height: 750px;
+    }
+
+    .coach-text {
+        width: 300px;
+        right: 30px;
+        top: 250px;
+    }
+
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .coach-collage {
+        width: 100%;
+        height: 650px;
+    }
+
+    .photo-main {
+        left: 5%;
+    }
+
+    .photo-small {
+        right: 5%;
+    }
+
+    .coach-text {
+        right: 5%;
+    }
+
+    .coach-quote {
+        left: 40%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .coach-profile {
+        padding: 70px 20px;
+    }
+
+    .coach-heading h2 {
+        font-size: 42px;
+    }
+
+    .coach-collage {
+        height: 900px;
+    }
+
+    .photo-main {
+        width: 75%;
+        height: 430px;
+
+        left: 10%;
+        top: 20px;
+    }
+
+    .photo-small {
+        width: 48%;
+        height: 180px;
+
+        right: 0;
+        top: 380px;
+    }
+
+    .photo-bottom {
+        width: 50%;
+        height: 180px;
+
+        left: 0;
+        bottom: 180px;
+    }
+
+    .coach-text {
+        width: 80%;
+
+        right: 10%;
+        top: 600px;
+    }
+
+    .coach-text h3 {
+        font-size: 32px;
+    }
+
+    .coach-quote {
+        display: none;
+    }
+
+    .coach-info {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px){
 
   .menu{
@@ -388,21 +934,30 @@ body{
   }
 
   .kotak{
-    width: 45%;
-    padding: 20px 15px;
-    margin: 0;
+     width: 100%;
+    max-width: none;
+    min-height: 300px;
+    height: auto;
+
+    padding: 25px 20px;
+
+    border-radius: 0 0 15px 15px;
   }
 
   .foto1-gym{
-    width: 45%;
-    height: 350px;
-    margin-top: 0;
-    margin-left: 0;
+  width: 100%;
+    max-width: none;
+    height: 280px;
+
+    border-radius: 15px 15px 0 0;
   }
 
   .gym-section{
-    gap: 0;
-    align-items: stretch;
+     width: calc(100% - 30px);
+    margin: 30px auto 0;
+
+    display: flex;
+    flex-direction: column;
   }
 
   .j-gym{
@@ -449,6 +1004,13 @@ body{
     text-align: center;
   }
 
+  .hero-text{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -80%) !important;
+}
+
   .square{
     width: 90%;
     height: auto;
@@ -458,4 +1020,701 @@ body{
     height: 250px;
   }
 
+}
+
+@media (max-width: 768px){
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .menu a{
+    display: block;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .service-container {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .service-box {
+    width: 160px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .service-box img {
+    width: 110px;
+    margin-top: -25px;
+  }
+
+  .service-box p {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .persegipanjang {
+    width: calc(100% - 30px);
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .persegipanjang img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .hero2 .hero-text {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 100%;
+  }
+
+  .hero2 .hero-text h2 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* WHAT YOU WILL GET */
+  .container-box {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
+
+  .judul-box {
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .wrapper-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .wrapper-box .box {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .info-bawah {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+    justify-items: center;
+    align-items: start;
+  }
+
+  .navigation,
+  .information,
+  .instagram,
+  .work {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a,
+  .information a,
+  .instagram a {
+    display: block;
+    text-align: center;
+  }
+
+  .judul-navigation,
+  .judul-information,
+  .judul-instagram,
+  .judul-work {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}
+
+/* =========================================
+   FINAL FIX UKURAN ELEMEN
+========================================= */
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* HERO PROFILE */
+
+.profile-keterangan{
+  width: calc(100% - 30px);
+  max-width: 1300px;
+}
+
+
+/* ABOUT GYM */
+
+.gym-section{
+  width: calc(100% - 30px);
+  max-width: 1300px;
+}
+
+
+/* OUR SERVICE */
+
+.hero2{
+  width: 100%;
+}
+
+.persegipanjang{
+  width: calc(100% - 30px);
+  max-width: 1250px;
+}
+
+
+/* SERVICE BOX */
+
+.service-container{
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* HYBRID */
+
+.service-section{
+  width: 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.service-card{
+  max-width: 620px;
+}
+
+
+/* MEMBERSHIP */
+
+.container-square{
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+  .profile-keterangan{
+    width: calc(100% - 30px);
+    height: 220px;
+    margin: 20px auto;
+  }
+
+  .gym-section{
+    width: calc(100% - 30px);
+    flex-direction: column;
+  }
+
+  .foto1-gym{
+    width: 100%;
+    max-width: none;
+    height: 280px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .kotak{
+    width: 100%;
+    max-width: none;
+    min-height: 300px;
+    padding: 25px 20px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .text-gym{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .service-box:last-child {
+    grid-column: 1 / 3;
+    justify-self: center;
+     width: 100%;
+    max-width: 216px;
+}
+
+
+  /* OUR SERVICE BANNER */
+
+  .hero2{
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .persegipanjang{
+    width: 100%;
+    max-width: none;
+    height: 180px;
+    margin-top: 70px;
+  }
+
+
+  /* SERVICE BOX */
+
+  .service-container{
+    width: 100%;
+    padding: 0 15px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: -40px;
+  }
+
+  .service-box{
+    width: 100%;
+    min-width: 0;
+    height: 145px;
+    padding: 10px;
+  }
+
+  .service-box img{
+    width: 100px;
+    max-width: 100%;
+  }
+
+
+  /* HYBRID */
+
+  .service-section{
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .service-card{
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+
+  /* MEMBERSHIP */
+
+  .container-square{
+    width: 100%;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .square{
+    width: 100%;
+    max-width: 400px;
+  }
+
+}
+
+/* =================================
+   FIX MOBILE COACH
+================================= */
+
+@media (max-width: 650px) {
+
+  /* Jarak antar coach */
+  .coach-profile,
+  .coach,
+  .coach-isma,
+  .coach-lia {
+    padding: 70px 20px 120px;
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+
+  /* Coach pertama jangan terlalu turun */
+  .coach-profile {
+    margin-top: 0;
+  }
+
+  /* Judul coach */
+  .coach-heading {
+    margin-bottom: 40px;
+  }
+
+  .coach-heading h2 {
+    margin-top: 0 !important;
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  /* Area yang menampung 3 foto + teks */
+  .coach-collage,
+  .coach-lia .coach-collage {
+    width: 100%;
+    height: 1100px !important;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* FOTO 1 */
+  .photo-main {
+    width: 75%;
+    height: 430px;
+
+    left: 10%;
+    top: 0;
+  }
+
+  /* FOTO 2 */
+  .photo-small {
+    width: 48%;
+    height: 180px;
+
+    right: 0;
+    top: 380px;
+  }
+
+  /* FOTO 3 */
+  .photo-bottom {
+    width: 50%;
+    height: 180px;
+
+    left: 0;
+    bottom: auto;
+    top: 470px;
+  }
+
+  /* TEKS COACH */
+  .coach-text {
+    width: 80%;
+    right: 10%;
+    top: 680px;
+
+    position: absolute;
+  }
+
+  .coach-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+
+  .coach-text h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .coach-text ul {
+    margin-bottom: 0;
+    padding-left: 25px;
+  }
+
+  .coach-text li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+  }
+
+  /* HILANGKAN GARIS YANG MOTONG TEKS */
+  .coach-info {
+    display: none;
+  }
+
+  /* Jarak aman sebelum coach berikutnya */
+  .coach,
+  .coach-isma,
+  .coach-lia {
+    padding-bottom: 120px;
+  }
+
+  /* Jangan pakai jarak desktop yang terlalu besar */
+  .coach-isma {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .coach-lia {
+    margin-top: 0;
+    padding-bottom: 150px;
+  }
+
+  /* Quote tidak perlu di mobile */
+  .coach-quote {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+
+    .coach-profile {
+        padding: 70px 20px;
+    }
+
+    .coach-heading h2 {
+        font-size: 42px;
+    }
+
+    .coach-collage {
+        height: 900px;
+    }
+
+    .photo-main {
+        width: 75%;
+        height: 430px;
+
+        left: 10%;
+        top: 20px;
+    }
+
+    .photo-small {
+        width: 48%;
+        height: 180px;
+
+        right: 0;
+        top: 380px;
+    }
+
+    .photo-bottom {
+        width: 50%;
+        height: 180px;
+
+        left: 0;
+        bottom: 180px;
+    }
+
+    .coach-text {
+        width: 80%;
+
+        right: 10%;
+        top: 600px;
+    }
+
+    .coach-text h3 {
+        font-size: 32px;
+    }
+
+    .coach-quote {
+        display: none;
+    }
+
+    .coach-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+
+  /* =========================
+     COACH FANNY
+  ========================= */
+
+  .coach .coach-text {
+    width: 90%;
+    left: 5%;
+    right: auto;
+    top: 600px;
+  }
+
+  .coach .coach-text p {
+    width: 100%;
+    max-width: none;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  /* COACH FANNY - pendekkan area section */
+  .coach .coach-collage {
+    height: 500px;
+  }
+
+  /* Dekatkan Coach Isma */
+  .coach-isma {
+    margin-top: 0px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  /* =================================
+     RAPATKAN SEMUA JARAK ANTAR COACH
+  ================================= */
+
+  /* COACH MAYANG */
+  .coach-profile {
+    padding: 50px 20px 0;
+  }
+
+  .coach-profile .coach-info {
+    margin: 20px auto 0;
+    padding-top: 15px;
+  }
+
+
+  /* COACH FANNY */
+  .coach {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .coach .coach-info {
+    margin: 20px auto 0;
+    padding-top: 15px;
+  }
+
+
+  /* COACH ISMA */
+  .coach-isma {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .coach-isma .coach-info {
+    margin: 20px auto 0;
+    padding-top: 15px;
+  }
+
+
+  /* COACH LIA */
+  .coach-lia {
+    margin-top: 20px !important;
+    padding-bottom: 50px;
+  }
+
+  .coach-lia .coach-info {
+    margin-top: 20px;
+  }
+
+
+  /* =================================
+     TINGGI AREA COACH
+  ================================= */
+
+  .coach-profile .coach-collage {
+    height: 900px;
+  }
+
+  .coach .coach-collage {
+    height: 900px;
+  }
+
+  .coach-isma .coach-collage {
+    height: 900px;
+  }
+
+  .coach-lia .coach-collage {
+    height: 900px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+    /* POSISI TEKS SEMUA COACH */
+    .coach-profile .coach-text,
+    .coach .coach-text,
+    .coach-isma .coach-text,
+    .coach-lia .coach-text {
+        top: 680px;
+        width: 90%;
+        left: 5%;
+        right: auto;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .coach .coach-text {
+        width: 90%;
+        left: 5%;
+        right: auto;
+        top: 600px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .coach {
+        padding-top: 40px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .coach .coach-text {
+        top: 680px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .coach-lia {
+        margin-top: -150px !important;
+    }
 }

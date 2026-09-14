@@ -345,24 +345,362 @@ color: #36200c;
   color: #36200c;
 }
 
-.schedule-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
+#pilatesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+/* JUDUL HYBRID CLASS */
+.package-gym {
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+/* CARD HYBRID */
+.service-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.service-card {
+    width: 620px;
+    background: #bdd298;
+    border-radius: 25px ;
+    padding: 18px 40px 35px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* VIDEO */
+.service-video {
+    width: 300px;
+    height: 350px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.service-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* JUDUL HYBRID */
+.service-card h2 {
+    color: #36200c;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 25px;
+}
+
+/* DESKRIPSI */
+.service-card p {
+    color: #36200c;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+  /* WHAT YOU WILL GET */
+  .container-box {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
+
+  .judul-box {
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .wrapper-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .wrapper-box .box {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .info-bawah {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+    justify-items: center;
+    align-items: start;
+  }
+
+  .navigation,
+  .information,
+  .instagram,
+  .work {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a,
+  .information a,
+  .instagram a {
+    display: block;
+    text-align: center;
+  }
+
+  .judul-navigation,
+  .judul-information,
+  .judul-instagram,
+  .judul-work {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .persegipanjang {
+    width: calc(100% - 30px);
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .persegipanjang img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .hero2 .hero-text {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 100%;
+  }
+
+  .hero2 .hero-text h2 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .service-container {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .service-box {
+    width: 160px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .service-box img {
+    width: 110px;
+    margin-top: -25px;
+  }
+
+  .service-box p {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .membership-menu {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .membership-menu p {
+    flex: 1;
+    padding: 0 8px;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  /* =========================
+     ABOUT PILATES MOBILE
+     ========================= */
+
+  .section-pilates {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 30px);
+    margin: 30px auto;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  /* Kotak hijau FOTO + KETERANGAN */
+  .bg-pilates {
+    width: 100%;
+    max-width: none;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .info-pilates {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ket-pilates {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .j-pilates {
+    width: 100%;
+    font-size: 32px;
+    margin: 20px 0 10px;
+    text-align: center;
+  }
+
+  .pembuka-pilates {
+    width: 100%;
+    max-width: 330px;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+
+  /* =========================
+     REFORMER / TOWER / CADILLAC
+     ========================= */
+
+  .box-samping {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 20px;
+    border: 2px solid #BDD298;
+    border-radius: 20px;
+    flex: none;
+  }
+
+  .judul {
+    margin: 0 0 15px;
+    text-align: center;
+    color: #36200c;
+    font-size: 28px;
+  }
+
+  .isi {
+    margin: 0;
+    color: #36200c;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Garis pemisah lama tidak diperlukan */
+  .garis2 {
+    display: none;
+  }
+
 }
 
 @media (max-width: 768px){
 
   .menu{
-    margin-right: 20px;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
   }
 
-  .hero-text h2{
-    font-size: 32px;
-    margin-top: 0;
+  .menu a{
+    display: block;
     text-align: center;
   }
+
 }

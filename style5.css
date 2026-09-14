@@ -166,6 +166,14 @@ body{
   text-align: center;
 }
 
+.Promo{
+  font-size: 45px;
+  color: #36200c;
+  padding-left: 50px; /* biar sejajar sama box */
+  margin-top: 90px;
+  text-align: center;
+}
+
 .reveal{
   opacity: 0;
   transform: translateY(150px);
@@ -252,7 +260,7 @@ body{
   color: #4e3522;
 }
 
-.schedule-container{
+.promo-container{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -260,23 +268,737 @@ body{
   margin-top: 20px;
 }
 
+#yogaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+  .info-bawah {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+    justify-items: center;
+    align-items: start;
+  }
+
+  .navigation,
+  .information,
+  .instagram,
+  .work {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a,
+  .information a,
+  .instagram a {
+    display: block;
+    text-align: center;
+  }
+
+  .judul-navigation,
+  .judul-information,
+  .judul-instagram,
+  .judul-work {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  /* WHAT YOU WILL GET */
+  .container-box {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
+
+  .judul-box {
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .wrapper-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .wrapper-box .box {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* kalau ada 1 kotak tersisa, posisikan di tengah */
+  .wrapper-box .box:last-child:nth-child(odd) {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: calc(50% - 7.5px);
+  }
+
+
+}
+
 @media (max-width: 768px){
 
   .menu{
-    margin-right: 20px;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
   }
 
-   .gym-section{
-    gap: 0;
+  .menu a{
+    display: block;
+    text-align: center;
+  }
+
+}
+
+@font-face {
+    font-family: 'Qurellia';
+    src: url('font/Qurellia-Salesta DEMO.ttf') format('opentype');
+}
+
+body{
+    font-family: 'Qurellia', sans-serif;
+    background-color: #F4EDDF;
+}
+
+.menu{
+  display: flex;
+  justify-content: flex-end; /* menu ke tengah */
+  gap: 40px; /* jarak antar menu */
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: #36200c;
+  position: relative;
+}
+
+.menu a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #bdd298;
+  transition: 0.3s;
+}
+
+.menu a:hover::after{
+  width: 100%;
+}
+
+.profile-keterangan{
+  width: 100%;
+  max-width: 1300px;
+  height: 600px;
+  margin: 20px auto;
+  display: block;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 20px;
+}
+
+.gym-section{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 50px;
+}
+
+.kotak2{
+  width: 45%;
+  background-color:#bdd298;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.text-gym{
+  max-width: 500px;
+  text-align: center;
+  color: #36200c;
+}
+
+.j-gym{
+  text-align: center;
+  max-width: 900px;
+  font-size: 32px;
+  justify-content: center;
+  gap: 60px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.p-gym{
+  text-align: center;
+  max-width: 900px;
+  justify-content: center;
+  gap: 60px;
+  margin: auto;
+}
+
+.foto1-gym{
+  width: 45%;
+  height: 500px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+.package-gym{
+  font-size: 42px;
+  padding-left: 50px; /* biar sejajar sama box */
+  text-align: center;
+  position: relative;
+  margin-top: 45px;
+  color: #36200c;
+}
+
+.membership-menu{
+  display: flex;
+  justify-content: center;
+   padding-left: 50px; /* biar sejajar sama box */
+}
+
+.membership-menu p{
+  padding: 0 25px;
+  border-right: 2px solid #bdd298;
+  color: #36200c;
+}
+
+/* biar yang terakhir gak ada garis */
+.membership-menu p:last-child{
+  border-right: none;
+}
+
+.container-box{
+  display: flex;
+  flex-direction: column; /* ⬅️ ini bikin judul di atas */
+  gap: 20px;           /* jarak antar kotak */
+  padding: 0 50px;     /* jarak dari pinggir layar */
+  align-items: center;
+  margin-top: 30px;
+}
+
+.judul-box{
+  font-size: 45px;
+  color: #36200c;
+  padding-left: 50px; /* biar sejajar sama box */
+  margin-top: 30px;
+}
+
+.wrapper-box{
+  display: flex;
+  gap: 20px;
+}
+
+.box{
+  width: 150px;
+  height: 70px;
+  border: 2px solid #bdd298;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center; /* tengah horizontal */
+  align-items: center;     /* tengah vertikal */
+  text-align: center;
+  color: #36200c;
+}
+
+.Schadule{
+  font-size: 45px;
+  color: #36200c;
+  padding-left: 50px; /* biar sejajar sama box */
+  margin-top: 90px;
+  text-align: center;
+}
+
+.Promo{
+  font-size: 45px;
+  color: #36200c;
+  padding-left: 50px; /* biar sejajar sama box */
+  margin-top: 90px;
+  text-align: center;
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.line{
+  width: 100%;        /* mengikuti ukuran layar */
+    height: 2px;
+    background-color: #4e3522;
+    margin: 20px auto;
+}
+
+.info-bawah{
+  display: flex;
+  gap: 80px;
+  margin-top: 20px;
+  align-items: flex-start;
+  justify-content: center; /* ini bikin isi ke tengah */
+}
+
+
+.navigation{
+  display: flex;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navigation a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #4e3522;
+}
+
+.information{
+  display: flex;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.information a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #4e3522;
+}
+
+.instagram{
+  display: flex;
+  flex-direction: column; /* bikin ke bawah */
+  gap: 8px; /* jarak antar menu */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.instagram a{
+  display: block;      /* supaya turun ke bawah */
+  text-align: center;  /* biar benar-benar tengah */
+  text-decoration: none;
+  color: #4e3522;
+}
+
+.work{
+  color:#36200c ;
+}
+
+.judul-navigation,
+.judul-work,
+.judul-instagram,
+.judul-information{
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #4e3522;
+}
+
+.promo-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#yogaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+/* JUDUL HYBRID CLASS */
+.package-gym {
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+/* CARD HYBRID */
+.service-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.service-card {
+    width: 620px;
+    background: #bdd298;
+    border-radius: 25px ;
+    padding: 18px 40px 35px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* VIDEO */
+.service-video {
+    width: 300px;
+    height: 350px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.service-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* JUDUL HYBRID */
+.service-card h2 {
+    color: #36200c;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 25px;
+}
+
+/* DESKRIPSI */
+.service-card p {
+    color: #36200c;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+  .info-bawah {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+    justify-items: center;
+    align-items: start;
+  }
+
+  .navigation,
+  .information,
+  .instagram,
+  .work {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a,
+  .information a,
+  .instagram a {
+    display: block;
+    text-align: center;
+  }
+
+  .judul-navigation,
+  .judul-information,
+  .judul-instagram,
+  .judul-work {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  /* WHAT YOU WILL GET */
+  .container-box {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
+
+  .judul-box {
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .wrapper-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .wrapper-box .box {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* kalau ada 1 kotak tersisa, posisikan di tengah */
+  .wrapper-box .box:last-child:nth-child(odd) {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: calc(50% - 7.5px);
+  }
+
+
+}
+
+@media (max-width: 768px){
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .menu a{
+    display: block;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  /* BAGIAN FOTO + KETERANGAN YOGA */
+  .gym-section {
+    width: calc(100% - 30px);
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
     align-items: stretch;
   }
 
-  .j-gym{
-    font-size: 18px;
+  /* FOTO */
+  .foto1-gym {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+
+    border-radius: 20px 20px 0 0;
   }
 
-  .p-gym{
-    font-size: 12px;
+  /* KOTAK KETERANGAN */
+  .kotak2 {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #bdd298;
+
+    padding: 30px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0 0 20px 20px;
   }
+
+  /* ISI KETERANGAN */
+  .text-gym {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+
+  .j-gym {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .p-gym {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  /* =========================
+     CLASSES & MEMBERSHIP
+  ========================= */
+
+  .package-gym {
+    width: 100%;
+    font-size: 32px;
+    padding-left: 0 !important;
+    padding-right: 0;
+    margin-left: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .membership-menu {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .membership-menu p {
+    padding: 0 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+
+  /* =========================
+     WHAT YOU WILL GET
+  ========================= */
+
+  .container-box {
+    width: 100%;
+    padding: 0 15px;
+    margin: 40px auto 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .judul-box {
+    width: 100%;
+    font-size: 30px;
+    padding-left: 0 !important;
+    margin: 30px 0 25px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .wrapper-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .wrapper-box .box {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 13px;
+  }
+
+  /* Kalau jumlah kotaknya ganjil,
+     kotak terakhir benar-benar di tengah */
+  .wrapper-box .box:last-child:nth-child(odd) {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: calc(50% - 7.5px);
+  }
+
+  /* HYBRID */
+
+  .service-section{
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .service-card{
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+
 }
