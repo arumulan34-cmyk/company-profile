@@ -591,4 +591,26 @@ margin-top: 120px;
     z-index: 1 !important;
   }
 
+    /* SERVICE CARD MOBILE */
+  .menucard{
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 95%;
+    max-width: 450px;
+    margin: 30px auto;
+  }
+
+  .card{
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .card img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
 }

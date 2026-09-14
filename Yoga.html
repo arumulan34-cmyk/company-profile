@@ -149,7 +149,11 @@ async function loadYoga() {
     const { data: publicUrlData } = supabase.storage.from("Yoga Schadule").getPublicUrl(file.name)
     const img = document.createElement("img")
     img.src = publicUrlData.publicUrl
-    img.style.width = "300px"; img.style.height = "400px"; img.style.objectFit = "cover"; img.style.borderRadius = "20px"; img.style.margin = "10px";
+    img.style.width = "300px"; 
+    img.style.height = "auto"; 
+    img.style.objectFit = "contain"; 
+    img.style.borderRadius = "20px"; 
+    img.style.margin = "10px";
     yogaContainer.appendChild(img)
   })
 }
