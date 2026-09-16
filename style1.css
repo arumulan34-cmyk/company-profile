@@ -465,3 +465,50 @@ margin-top: 120px;
     right: -10px;
   }
 }
+
+@media screen and (max-width: 600px){
+
+    .navbar{
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    /* ADMIN TETAP DI KIRI */
+    .login{
+        margin: 0 0 0 15px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .login a{
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    /* MENU DIDORONG KE KANAN */
+    .menu{
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        gap: 8px !important;
+
+        margin-left: auto !important;
+        margin-right: 10px !important;
+
+        width: auto !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .menu > a,
+    .dropdown > a{
+        font-size: 10px !important;
+        white-space: nowrap !important;
+    }
+
+    .dropdown{
+        flex-shrink: 0 !important;
+    }
+
+}
