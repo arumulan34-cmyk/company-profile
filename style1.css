@@ -617,7 +617,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     .menu{
         gap: 10px !important;
@@ -635,7 +635,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     /* =========================
        SHOWERROOM
@@ -694,7 +694,7 @@ margin-top: 120px;
    HANYA NAVBAR, WE PROVIDE SERVICE & SHOWERROOM
    ===================================================== */
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     /* NAVBAR HP - MEMANJANG KE SAMPING */
     .navbar{
@@ -749,7 +749,7 @@ margin-top: 120px;
         transform: translateX(-50%) !important;
     }
 
-}
+
 
     /* WE PROVIDE SERVICE - 2 X 2 */
     .menucard{
@@ -821,7 +821,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     /* ABOUT US - SATU BLOK DI TENGAH */
     .info{
@@ -846,7 +846,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     .navbar{
         width: 100%;
@@ -883,7 +883,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     .navbar{
         width: 100%;
@@ -920,7 +920,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     .info{
         width: calc(100% - 44px) !important;
@@ -939,7 +939,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     .gallery{
         display: grid !important;
@@ -1006,7 +1006,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     .info-bawah{
         display: grid !important;
@@ -1050,7 +1050,7 @@ margin-top: 120px;
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     /* =========================
        ABOUT US
